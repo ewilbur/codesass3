@@ -173,7 +173,24 @@ in the finite field $\FF_2$.
 
 \subsection*{6.81} Show that $x^3 + y^3 = 3$ has no solution in the integers.
 \begin{solution}
-	content...
+	Since $x^3 + y^3 = (x + y)(x^2 - xy + y^2)$ and 3 is prime, one of the following two cases would have to be true
+	\begin{enumerate}
+		\item[1.] $x + y = 1$ and $x^2 - xy + y^2 = 3$
+		\item[2.] $x + y = 3$ and $x^2 - xy + y^2 = 1$
+	\end{enumerate}
+	Suppose the first case. Then $y = 1 - x$ so
+	\begin{align*}
+		x^2 - xy + y^2 = 3 &\Rightarrow x^2 - x(1 - x) + (1 - x)^2 = 3 \\
+		&\Rightarrow 3x^2 - 3x - 2 = 0 \\
+		&\Rightarrow x = \frac{3}{2} \text{ or } x = \frac{-1}{2}.
+	\end{align*}
+	In both of these two solutions, $x$ is not an integer, so case 1 fails. Suppose instead that it is case 2. Then similarly $y = 3 - x$
+	\begin{align*}
+		x^2 - xy + y^2 = 1 &\Rightarrow x^2 - x(3 - x) + (3 - x)^2 = 1 \\
+		&\Rightarrow 3x^2 - 9x + 8 = 0
+	\end{align*}
+	which has discriminant $-15$, and so has no real solution. In both cases, we are unable to get integer solutions. Thus the equation has no integer solutions.
+	
 \end{solution}
 
 \subsection*{8.17} Show that
@@ -181,7 +198,13 @@ $$
 	123456789123456789 + 234567891234567891 \neq 358025680358025680
 $$
 \begin{solution}
-	content...
+	$$
+		123456789123456789 + 234567891234567891 = 358024680358024680
+	$$
+	and 
+	$$
+		358024680358024680 \neq 358025680358025680
+	$$
 \end{solution}
 
 \end{document}
