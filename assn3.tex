@@ -77,7 +77,10 @@ in the finite field $\FF_2$.
 	$$
 \end{solution}
 
-\subsection*{5.05}
+\subsection*{5.05} Let $g(x) = x^3 + x + 1$ be a generating polynomials for a CRC/ Compute the CRC for the byte 11100011.
+\begin{solution}
+	0000
+\end{solution}
 %\subsection*{5.05} Let $g(x) = x^3 + x + 1$ be a generating polynomial for a CRC. Figure out how to be a little clever in computing the CRC for the bytes
 %$$
 %	111000110101000110011110
@@ -120,7 +123,7 @@ in the finite field $\FF_2$.
 
 \subsection*{6.22} Show that for any integer $n$, the integers $n$ and $n^2 + 1$ are relatively prime.
 \begin{solution}
-	
+	Let $d = \gcd\left(n, n^2 + 1\right)$. Then $d | n$ and $d | n^2 + 1$. But also, $d | n^2$ so it must be that $d | n^2 + 1 - n^2$ since it's just a linear combination of elements that are divisible by $d$. Thus $d | 1$ so $d = 1$.
 \end{solution}
 
 \subsection*{6.37} Find $\gcd(1112, 1544)$ and express it in the form $1112x + 1544y$ for some integers $x$ and $y$ by hand computation.
@@ -161,14 +164,16 @@ in the finite field $\FF_2$.
 	\end{align*}
 \end{solution}
 
-\subsection*{6.52} ????? Check with trevor that this is the correct problem. Waiting for reply
+\subsection*{6.52} Find the multiplicative inverse of 3 modulo 100
 \begin{solution}
-	content...
+	$$
+		3 \times 67 \cong 1 \mod 100.
+	$$
 \end{solution}
 
 \subsection*{6.80} Show that $x^2 - y^2 = 102$ has no solution in the integers.
 \begin{solution}
-	content...
+	   
 \end{solution}
 
 \subsection*{6.81} Show that $x^3 + y^3 = 3$ has no solution in the integers.
