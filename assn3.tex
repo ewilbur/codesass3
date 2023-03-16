@@ -1,0 +1,176 @@
+\documentclass[]{article}
+\usepackage{amsmath,amsthm,amssymb,amsfonts}
+\usepackage{hyperref}
+
+\renewcommand{\Pr}[1]{\text{Pr}\left(#1\right)} % For probability
+
+\let\oldemptyset\emptyset % Rebind the crappy looking emptyset to another variable
+\let\emptyset\varnothing % and redfine emptyset as the good looking one
+
+\let\oldphi\phi
+\let\phi\varphi 
+
+\newcommand\<{\langle}
+\renewcommand\>{\rangle}
+\newcommand{\kk}{\ensuremath{\Bbbk}} 
+\newcommand{\CC}{\ensuremath{\mathbb{C}}} 
+\newcommand{\NN}{\ensuremath{\mathbb{N}}}
+\newcommand{\QQ}{\ensuremath{\mathbb{Q}}} 
+\newcommand{\RR}{\ensuremath{\mathbb{R}}} 
+\newcommand{\ZZ}{\ensuremath{\mathbb{Z}}}
+\newcommand{\FF}{\ensuremath{\mathbb{F}}}
+\newcommand{\cO}{\ensuremath{\mathcal{O}}} 
+\newcommand{\Aut}{\ensuremath{\mathrm{Aut}}} 
+\newcommand{\Gal}{\ensuremath{\mathrm{Gal}}} 
+
+
+\newenvironment{solution}
+{
+	\begin{proof}[Solution] \text{ }
+		\\
+	}
+	{
+	\end{proof}
+}
+
+%opening
+\title{Assignment 3}
+\author{Evan Curry Wilbur}
+
+\begin{document}
+
+\maketitle
+
+\subsection*{5.01} Compute $1 + 1 + 1 + 1 + 1$ in the finite field $\FF_2$.
+\begin{solution}
+	$1 + 1 + 1 + 1 + 1 = 1$.
+\end{solution}
+%\begin{solution}
+%	$1 + 1 + 1 + 1 + 1 = 1$
+%\end{solution}
+
+\subsection*{5.02} Compute
+$$
+	\underbrace{1 + 1 + 1 + \dots + 1}_\text{107}
+$$
+in the finite field $\FF_2$.
+\begin{solution}
+	$$
+		\underbrace{1 + 1 + 1 + \dots + 1}_\text{107} = 1.
+	$$
+\end{solution}
+
+\subsection*{5.03} Compute $\left(1 + x + x^2\right)^4$ as a polynomial with coefficients in $\FF_2$.
+\begin{solution}
+	Using the \href{https://planetmath.org/freshmansdream}{Freshman's dream} theorem, we are actually allowed to distribute the exponent across the addition so
+\begin{align*}
+	\left(1 + x + x^2\right)^4 &= 1^4 + x^4 + \left(x^2\right)^4 \\
+	&= 1 + x^2 + x^8 
+\end{align*}
+\end{solution}
+
+\subsection*{5.04} Compute the product $\left(x^4 + x^3 + x^2 + x + 1\right)\left(x^4 + x + 1\right)\left(x^4 + x^3 + 1\right)$ in the collection of polynomials with coefficients in $\FF_2$.
+\begin{solution}
+	Worked this out on paper. Hopefully you can trust I did the algebra correctly since I'm too lazy to type up all the steps:
+	$$
+		x^{12}+2x^{11}+2x^{10}+3x^9+6x^8+6x^7+5x^6+6x^5+6x^4+3x^3+2x^2+2x+1
+	$$
+\end{solution}
+
+\subsection*{5.05} Let $g(x) = x^3 + x + 1$ be a generating polynomial for a CRC. Figure out how to be a little clever in computing the CRC for the bytes
+$$
+	111000110101000110011110
+$$
+so that you don't fill up a whole sheet of paper with an enormously long division.
+\begin{solution}
+	content...
+\end{solution}
+
+\subsection*{5.08} Verify that the CRC with generating polynomial $1 + x^2 + x^3 + x^4$ fails to detect two-bit errors that are a multiple of 7 bits apart.
+\begin{solution}
+	content...
+\end{solution}
+
+\subsection*{6.01} Factor the integers 1028 and 2057 into primes.
+\begin{solution}
+	\begin{align*}
+		1028 &= 2^2 \times 257 \\
+		2057 &= 11^2 \times 17.
+	\end{align*}
+\end{solution}
+
+\subsection*{6.03} Find the reduction $\mod 88$ of -1000.
+\begin{solution}
+	$$
+		-1000 \cong 56 \mod 88.
+	$$
+\end{solution}
+
+\subsection*{6.07} Prove in general that if $r$ is the reduction of $N \mod m$, and if $r \neq 0$, then $m - r$ is the reduction of $-N \mod m$.
+\begin{solution}
+	Let $r \cong N \mod m$ where $0 < r < m$. So there exists a $q \in \ZZ$ such that $N = qm + r$. Then
+	\begin{align*}
+		N = qm + r \Rightarrow -N &= -qm - r \\
+		&= -qm - r + m - m \\
+		&= -(q + 1)m + (m - r).
+	\end{align*}
+	Since $0 < r < m$ it follows that $0 < m - r$. Furthermore, $r > 0$ hence $m - r < m$. Therefore, $0 < m - r < m$ and so $m - r$ is the reduction of $-N$ modulo $m$.
+\end{solution}
+
+\subsection*{6.22} Show that for any integer $n$, the integers $n$ and $n^2 + 1$ are relatively prime.
+\begin{solution}
+	
+\end{solution}
+
+\subsection*{6.37} Find $\gcd(1112, 1544)$ and express it in the form $1112x + 1544y$ for some integers $x$ and $y$ by hand computation.
+\begin{solution}
+	content...
+\end{solution}
+
+\subsection*{6.49} Compute and \textit{reduce modulo} the indicated \textit{modulus:} $110 \times 124 \mod 3$ and also $12 + 1234567890 \mod 10$.
+\begin{solution}
+	content...
+\end{solution}
+
+\subsection*{6.50} Compute $2^{1000} \% 11$
+\begin{solution}
+	\begin{align*}
+		2^{10} &\cong 1 \mod 11 \\
+		\left(2^{10}\right)^{100} &\cong 1^{100} \mod 11 \\
+		2^{1000} &\cong 1 \mod 11
+	\end{align*}
+\end{solution}
+
+\subsection*{6.57} From the definition, find $\phi(36), \phi(18),$ and $\phi(28)$.
+\begin{solution}
+	\begin{align*}
+		\phi(36) &= 12 \\
+		\phi(18) &= 6 \\
+		\phi(28) &= 12
+	\end{align*}
+\end{solution}
+
+\subsection*{6.52} ????? Check with trevor that this is the correct problem. Waiting for reply
+\begin{solution}
+	content...
+\end{solution}
+
+\subsection*{6.80} Show that $x^2 - y^2 = 102$ has no solution in the integers.
+\begin{solution}
+	content...
+\end{solution}
+
+\subsection*{6.81} Show that $x^3 + y^3 = 3$ has no solution in the integers.
+\begin{solution}
+	content...
+\end{solution}
+
+\subsection*{8.17} Show that
+$$
+	123456789123456789 + 234567891234567891 \neq 358025680358025680
+$$
+\begin{solution}
+	content...
+\end{solution}
+
+\end{document}
