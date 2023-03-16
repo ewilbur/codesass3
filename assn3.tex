@@ -92,7 +92,10 @@ in the finite field $\FF_2$.
 
 \subsection*{5.08} Verify that the CRC with generating polynomial $1 + x^2 + x^3 + x^4$ fails to detect two-bit errors that are a multiple of 7 bits apart.
 \begin{solution}
-	content...
+	According to the textbook, it is sufficient to show that $g | x^7 + 1$. Indeed, it can be easily verified that
+	$$
+		x^7 + 1 = (x^3 + x^2 + 1)(x^4 + x^3 + x^2 + 1)
+	$$
 \end{solution}
 
 \subsection*{6.01} Factor the integers 1028 and 2057 into primes.
